@@ -15,7 +15,7 @@
 # insertAt(data, index) - inserts a new node with the provided value at the given index.
 # removeAt(index) - removes the node at the given index.
 # isEmpty - returns true if the list is empty and false otherwise
-
+# reverse() - reverses the linked list
 
 # time complexity analysis
 
@@ -33,3 +33,4 @@
 # insertAt - O(n),
 # removeAt - O(n),
 # isEmpty - O(1),
+# reverse - O(n)

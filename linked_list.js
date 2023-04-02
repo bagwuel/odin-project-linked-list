@@ -143,6 +143,24 @@ class LinkedList {
         }
         return (curr)
     }
+    reverse() {
+        if (this.isEmpty() || this.head === this.tail)
+            return
+        else {
+            let curr = this.head
+            let prev = null
+            let next = curr.next
+            while (curr.next !== null) {
+                curr.next = prev
+                prev = curr
+                curr = next
+                next = curr.next
+            }
+            curr.next = prev
+            this.tail = this.head
+            this.head = curr
+        }
+    }
     isEmpty = () => this.head === null && this.tail === null;
 }
 
@@ -173,4 +191,7 @@ myList.toString()
 myList.insertAt(12, 18)
 myList.toString()
 myList.insertAt(22, 5)
+myList.reverse()
 myList.toString()
+console.log(myList.getHead())
+console.log(myList.getTail())
